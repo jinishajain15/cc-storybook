@@ -6,7 +6,7 @@ import Button from './button.component';
 import Header from './header.component';
 
 const meta: Meta<Header> = {
-  title: 'Example/Header',
+  title: 'Components/Header',
   component: Header,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs
   tags: ['autodocs'],

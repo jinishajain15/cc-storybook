@@ -4,7 +4,8 @@ import docJson from '../documentation.json';
 import { withThemeByClassName } from '@storybook/addon-styling';
 
 /* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
-import '../src/assets/css/tailwind.css';
+import '!style-loader!css-loader!../src/styles.scss';
+
 setCompodocJson(docJson);
 
 const preview: Preview = {
