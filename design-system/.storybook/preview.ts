@@ -9,8 +9,6 @@ import '!style-loader!css-loader!@fontsource/roboto/500.css';
 import '!style-loader!css-loader!@fontsource/roboto/700.css';
 import '!style-loader!css-loader!@fontsource/material-icons';
 
-/* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
-import '!style-loader!css-loader!../src/styles.scss';
 
 setCompodocJson(docJson);
 
@@ -38,3 +36,4 @@ const preview: Preview = {
 };
 
 export default preview;
+

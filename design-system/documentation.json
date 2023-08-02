@@ -76,7 +76,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-5aec16a2f3cd68e85193abaa5db6b7325584b31241576ed93527c88b6830954be86af5ade2626201da27f5f4a97bfddc804b4d2aa765f1cdbc8e6307808daf6d",
+            "id": "component-ButtonComponent-72edc036a920241567458dcf9ba9caf93519189dc2d7f5c087e87faf0418228fb639038889a9d037617663a9b6d52ddd7d6046ef25d626d8e65c1e1b7661a8f7",
             "file": "src/app/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -100,7 +100,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 11,
-                    "type": "ThemePalette",
+                    "type": "string",
                     "decorators": []
                 },
                 {
@@ -111,18 +111,18 @@
                     "line": 10,
                     "type": "string",
                     "decorators": []
-                }
-            ],
-            "outputsClass": [
+                },
                 {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
+                    "name": "mode",
+                    "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
-                    "type": "EventEmitter"
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
                 }
             ],
+            "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [
                 {
@@ -131,7 +131,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 18,
+                    "line": 20,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -145,7 +145,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { ThemePalette } from '@angular/material/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n  @Input() label = 'Button';\n  @Input() color: ThemePalette = 'primary';\n\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { ThemePalette } from '@angular/material/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n  @Input() label = 'Button';\n  @Input() color = 'primary';\n  @Input() mode = 'primary';\n\n\n  /* @Output()\n  onClick = new EventEmitter<Event>(); */\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -160,12 +160,12 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 14
+                "line": 12
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<!-- <button *ngIf=\"type === 'primary'\" mat-raised-button color=\"primary\" (click)=\"onClick.emit($event)\">\n    {{label}}\n</button>\n<button *ngIf=\"type === 'secondary'\" mat-stroked-button color=\"primary\" (click)=\"onClick.emit($event)\">\n    {{label}}\n</button> -->\n\n<button mat-button [color]=\"color\" (click)=\"onClick($event)\">\n    {{ label }}\n</button>"
+            "templateData": "<button mat-raised-button [color]=\"color\" *ngIf=\"mode=='primary'\">\n    {{ label }}\n</button>\n<button mat-stroked-button [color]=\"color\" *ngIf=\"mode=='secondary'\">\n    {{ label }}\n</button>"
         },
         {
             "name": "HeaderComponent",
@@ -386,7 +386,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ButtonComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [MatButtonModule],\r\n    })\r\n  ],\r\n  tags: ['autodocs'],\r\n  render: (args: ButtonComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ButtonComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [MatButtonModule],\r\n    })\r\n  ],\r\n  tags: ['autodocs'],\r\n  render: (args: ButtonComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    color: {\r\n      description: 'Theme color palette for the button.',\r\n      options: [null, 'primary', 'accent', 'warn'],\r\n      control: { type: 'select' }\r\n    },\r\n    mode: {\r\n      options: ['primary', 'secondary'],\r\n      control: { type: 'select' }\r\n    }\r\n  },\r\n}"
             },
             {
                 "name": "preview",
@@ -406,7 +406,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    label: 'Primary',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    label: 'Primary',\r\n    mode: 'primary',\r\n  },\r\n}"
             },
             {
                 "name": "Secondary",
@@ -416,7 +416,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    label: 'Secondary',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    label: 'Secondary',\r\n    mode: 'secondary',\r\n  },\r\n}"
             }
         ],
         "functions": [],
@@ -444,7 +444,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ButtonComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [MatButtonModule],\r\n    })\r\n  ],\r\n  tags: ['autodocs'],\r\n  render: (args: ButtonComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ButtonComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [MatButtonModule],\r\n    })\r\n  ],\r\n  tags: ['autodocs'],\r\n  render: (args: ButtonComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    color: {\r\n      description: 'Theme color palette for the button.',\r\n      options: [null, 'primary', 'accent', 'warn'],\r\n      control: { type: 'select' }\r\n    },\r\n    mode: {\r\n      options: ['primary', 'secondary'],\r\n      control: { type: 'select' }\r\n    }\r\n  },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -454,7 +454,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Primary',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    label: 'Primary',\r\n    mode: 'primary',\r\n  },\r\n}"
                 },
                 {
                     "name": "Secondary",
@@ -464,7 +464,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Secondary',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    label: 'Secondary',\r\n    mode: 'secondary',\r\n  },\r\n}"
                 }
             ],
             ".storybook/preview.ts": [

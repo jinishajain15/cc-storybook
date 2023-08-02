@@ -127,7 +127,11 @@
               "-d",
               "."
             ],
-            "outputDir": "storybook-static"
+            "outputDir": "storybook-static",
+            "styles": [
+              "src/trushield-theme.scss",
+              "src/styles.scss"
+            ]
           }
         }
       }
