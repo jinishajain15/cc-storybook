@@ -3,6 +3,12 @@ import { setCompodocJson } from '@storybook/addon-docs/angular';
 import docJson from '../documentation.json';
 import { withThemeByClassName } from '@storybook/addon-styling';
 
+import '!style-loader!css-loader!@fontsource/roboto/300.css';
+import '!style-loader!css-loader!@fontsource/roboto/400.css';
+import '!style-loader!css-loader!@fontsource/roboto/500.css';
+import '!style-loader!css-loader!@fontsource/roboto/700.css';
+import '!style-loader!css-loader!@fontsource/material-icons';
+
 /* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
 import '!style-loader!css-loader!../src/styles.scss';
 

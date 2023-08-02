@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/angular';
+/* import type { Meta, StoryObj } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
 import { within, userEvent } from '@storybook/testing-library';
 import { CommonModule } from '@angular/common';
 
-import Button from './button.component';
-import Header from './header.component';
+import Button from '../Button/button.component';
+import Header from '../Header/header.component';
 import Page from './page.component';
 
 const meta: Meta<Page> = {
@@ -44,3 +44,4 @@ export const LoggedIn: Story = {
     await userEvent.click(loginButton);
   },
 };
+ */
