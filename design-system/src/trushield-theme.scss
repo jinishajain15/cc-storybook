@@ -1,3 +1,4 @@
+@use "@angular/material" as mat;
 @import "@angular/material/theming";
 $mat-pink: (
     50: #fce4ec,
@@ -64,10 +65,17 @@ $mat-teal: (
     )
 );
 
-@include mat-core();
-$trushield-theme-primary: mat-palette($mat-teal, 600);
-$trushield-theme-accent: mat-palette($mat-pink, 600);
-$trushield-theme-warn: mat-palette($mat-red);
-$trushield-theme: mat-light-theme($trushield-theme-primary, $trushield-theme-accent, $trushield-theme-warn);
-
-@include angular-material-theme($trushield-theme);
+@include mat.core();
+$trushield-theme-primary: mat.define-palette($mat-teal, 600);
+$trushield-theme-accent: mat.define-palette($mat-pink, 600);
+$trushield-theme-warn: mat.define-palette(mat.$red-palette);
+$trushield-theme: mat.define-light-theme(
+    (
+        color: (
+            primary: $trushield-theme-primary,
+            accent: $trushield-theme-accent,
+            warn: $trushield-theme-warn
+        )
+    )
+);
+@include mat.all-component-themes($trushield-theme);
