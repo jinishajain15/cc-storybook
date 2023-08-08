@@ -19,8 +19,8 @@ Design System for Coverage Coach
    If you got SSL errors, execute following commands and try installing again:
 
     ```
-    export NODE_TLS_REJECT_UNAUTHORIZED=0
-    export NVM_NODEJS_ORG_MIRROR="http://nodejs.org/dist"
+    set NODE_TLS_REJECT_UNAUTHORIZED=0
+    set NVM_NODEJS_ORG_MIRROR="http://nodejs.org/dist"
     npm config set strict-ssl false
     ```
 
