@@ -3,9 +3,7 @@ import logo from "../src/stories/assets/trushield-logo.png";
 
 export default create({
     base: 'light',
-    fontBase: '"Open Sans", sans-serif',
-    fontCode: 'monospace',
-
+    fontBase: '"freight-sans-pro", sans-serif',
     brandTitle: 'Trushield Coverage Coach',
     brandUrl: 'https://quote-qa.trushieldinsurance.ca',
     brandImage: logo,

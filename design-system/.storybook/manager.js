@@ -1,6 +1,6 @@
 import { addons } from '@storybook/manager-api';
-import coverageCoach from './CCTheme';
+import trushield from './TrushieldTheme';
 
 addons.setConfig({
-    theme: coverageCoach,
+    theme: trushield,
 });
