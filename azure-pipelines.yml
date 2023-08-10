@@ -1,0 +1,39 @@
+trigger:
+  branches:
+    include:
+      - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+  # name: 'DX'
+
+
+stages:
+- stage: Deploy
+  jobs:
+  - job: DeployJob
+    steps:
+    - script: |
+        curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+        node -v
+        npm -v
+      displayName: 'Install Node.js'
+
+    - script: |
+        cd design-system
+        npm install
+      displayName: 'Install dependencies'
+
+    - script: |
+        cd design-system
+        npm run build-storybook
+      displayName: 'Build the project'
+
+    - task: AzureStaticWebApp@0
+      inputs:
+        app_location: 'design-system'
+        api_location: 'api'
+        output_location: 'storybook-static'
+        is_static_export: true
+        azure_static_web_apps_api_token: '8be30235746587e8199739acb409292beeb455228f391e99fe7d5ce17c68da173-84f7f2d9-e6e8-47b2-b20e-65172ec6c8b5010227691'
