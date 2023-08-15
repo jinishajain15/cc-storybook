@@ -28,6 +28,15 @@ body {
             @apply text-primary-600 border-[0] border-b border-solid border-gray-500 font-medium;
         }
     }
+    .card {
+        background-color: theme("colors.white");
+        border-radius: theme("borderRadius.lg");
+        padding: theme("spacing.6");
+        box-shadow: theme("boxShadow.lg");
+    }
+    .secondary-btn {
+        @apply text-white bg-primary-600 uppercase py-[7px] px-[15px] rounded;
+    }
 }
 .mdc-button {
     text-transform: uppercase;
