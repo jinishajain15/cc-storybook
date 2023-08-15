@@ -8,8 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "storybook": "ng run design-system:storybook",
-    "tailwind": "npx tailwindcss -i ./src/styles.scss -o ./src/assets/css/tailwind.css",
-    "build-storybook": "ng run design-system:build-storybook"
+    "tailwind": "npx tailwindcss -i ./src/styles.scss -o ./src/assets/css/tailwind.css --watch",
+    "build-storybook": "ng run design-system:build-storybook",
+    "chromatic": "npx chromatic --project-token=chpt_5269dea35c13172"
   },
   "private": true,
   "dependencies": {
@@ -49,6 +50,7 @@
     "@storybook/theming": "^7.1.1",
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "^10.4.14",
+    "chromatic": "^6.21.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -61,5 +63,7 @@
     "storybook": "^7.1.0",
     "tailwindcss": "^3.3.3",
     "typescript": "~4.9.4"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "design-system@0.0.0"
 }

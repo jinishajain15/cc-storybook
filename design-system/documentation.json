@@ -76,7 +76,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-72edc036a920241567458dcf9ba9caf93519189dc2d7f5c087e87faf0418228fb639038889a9d037617663a9b6d52ddd7d6046ef25d626d8e65c1e1b7661a8f7",
+            "id": "component-ButtonComponent-0cb8e97b8423c83bed375c7ca695ff8288ac73c5a9d1cfe7bd5ddb0a12663d13a4509dfc6b305ccf49d33fe94eda06ac888b0aa7fca02f28b9413a0be8e34395",
             "file": "src/app/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -99,6 +99,15 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "icon",
+                    "defaultValue": "'info_icon'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
                     "line": 11,
                     "type": "string",
                     "decorators": []
@@ -113,11 +122,29 @@
                     "decorators": []
                 },
                 {
-                    "name": "mode",
+                    "name": "showLeftIcon",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "Boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "showRightIcon",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "Boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "variant",
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 13,
                     "type": "string",
                     "decorators": []
                 }
@@ -131,7 +158,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 23,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -145,7 +172,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { ThemePalette } from '@angular/material/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n  @Input() label = 'Button';\n  @Input() color = 'primary';\n  @Input() mode = 'primary';\n\n\n  /* @Output()\n  onClick = new EventEmitter<Event>(); */\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { ThemePalette } from '@angular/material/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n  @Input() label = 'Button';\n  @Input() icon = 'info_icon';\n  @Input() color = 'primary';\n  @Input() variant = 'primary';\n  @Input() showLeftIcon: Boolean = false;\n  @Input() showRightIcon: Boolean = false;\n\n\n  /* @Output()\n  onClick = new EventEmitter<Event>(); */\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -160,12 +187,12 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 12
+                "line": 15
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<button mat-raised-button [color]=\"color\" *ngIf=\"mode=='primary'\">\n    {{ label }}\n</button>\n<button mat-stroked-button [color]=\"color\" *ngIf=\"mode=='secondary'\">\n    {{ label }}\n</button>"
+            "templateData": "<button mat-raised-button [color]=\"color\" *ngIf=\"variant=='primary'\">\n    <mat-icon *ngIf=\"showLeftIcon\">{{icon}}</mat-icon>\n    {{ label }}\n    <mat-icon *ngIf=\"showRightIcon\" iconPositionEnd>{{icon}}</mat-icon>\n</button>\n<button mat-stroked-button [color]=\"color\" *ngIf=\"variant=='secondary'\">\n    <mat-icon *ngIf=\"showLeftIcon\">{{icon}}</mat-icon>\n    {{ label }}\n    <mat-icon *ngIf=\"showRightIcon\" iconPositionEnd>{{icon}}</mat-icon>\n</button>\n\n<button mat-icon-button [color]=\"color\" *ngIf=\"variant=='icon'\">\n    <mat-icon>{{icon}}</mat-icon>\n</button>"
         },
         {
             "name": "HeaderComponent",
@@ -330,13 +357,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-e84838435d158f5ec4bff33db41484f58b94271a27aaffaf19f463f4d069cba7d52a830db614d6fedf66d34ffd8aeec0020e864bddd710ad7337d5569a495900",
+            "id": "module-AppModule-3bfc4d1fd5f077e4ccc8afa4b3fc4962f08e945e841a8f5c27172d3d6efbccef1ba55528a4cb34657f195d08a0bafb823f2cc8ee4861f7c8dd75786226c47aea",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n\nimport { MatButtonModule } from '@angular/material/button';\nimport { ButtonComponent } from './button/button.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    ButtonComponent,\n  ],\n  imports: [\n    BrowserModule,\n    BrowserAnimationsModule,\n    MatButtonModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\nimport { MaterialModule } from '../shared/material.module';\nimport { ButtonComponent } from './button/button.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    ButtonComponent,\n  ],\n  imports: [\n    BrowserModule,\n    BrowserAnimationsModule,\n    MaterialModule,\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -355,7 +382,11 @@
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "MaterialModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -374,10 +405,76 @@
                     "elements": []
                 }
             ]
+        },
+        {
+            "name": "MaterialModule",
+            "id": "module-MaterialModule-3c11ff6702fa0dde8caa6562c24b04679ca13e6d77dd31f33d615e8a763dee6e7474d39bdd05d0f8024793d1d01db839bc5619cc3ec1c9fbf768f24e21947276",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/shared/material.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nimport { MatAutocompleteModule } from '@angular/material/autocomplete';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatButtonToggleModule } from '@angular/material/button-toggle';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatCheckboxModule } from '@angular/material/checkbox';\r\nimport { MatChipsModule } from '@angular/material/chips';\r\nimport { MatDatepickerModule } from '@angular/material/datepicker';\r\nimport { MatDialogModule } from '@angular/material/dialog';\r\nimport { MatDividerModule } from '@angular/material/divider';\r\nimport { MatExpansionModule } from '@angular/material/expansion';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatMenuModule } from '@angular/material/menu';\r\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\r\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\r\nimport { MatListModule } from '@angular/material/list';\r\nimport { MatRadioModule } from '@angular/material/radio';\r\nimport { MatNativeDateModule, MatRippleModule, } from '@angular/material/core';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport { MatSliderModule } from '@angular/material/slider';\r\nimport { MatSlideToggleModule } from '@angular/material/slide-toggle';\r\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\r\nimport { MatStepperModule } from '@angular/material/stepper';\r\nimport { MatTableModule } from '@angular/material/table';\r\nimport { MatTabsModule } from '@angular/material/tabs';\r\nimport { MatToolbarModule } from '@angular/material/toolbar';\r\nimport { MatTooltipModule } from '@angular/material/tooltip';\r\nimport { TextFieldModule } from '@angular/cdk/text-field';\r\n\r\nexport const DateFormats = {\r\n    parse: {\r\n        dateInput: ['YYYY/MM/DD']\r\n    },\r\n    display: {\r\n        dateInput: 'YYYY/MM/DD',\r\n        monthYearLabel: 'MMM YYYY',\r\n        dateA11yLabel: 'LL',\r\n        monthYearA11yLabel: 'MMMM YYYY',\r\n    },\r\n};\r\n\r\n@NgModule({\r\n    declarations: [],\r\n    imports: [\r\n        CommonModule,\r\n        MatAutocompleteModule,\r\n        MatButtonModule,\r\n        MatButtonToggleModule,\r\n        MatCardModule,\r\n        MatCheckboxModule,\r\n        MatChipsModule,\r\n        MatDatepickerModule,\r\n        MatDialogModule,\r\n        MatDividerModule,\r\n        MatExpansionModule,\r\n        MatFormFieldModule,\r\n        MatInputModule,\r\n        MatIconModule,\r\n        MatListModule,\r\n        MatMenuModule,\r\n        MatNativeDateModule,\r\n        MatProgressBarModule,\r\n        MatProgressSpinnerModule,\r\n        MatRadioModule,\r\n        MatRippleModule,\r\n        MatSelectModule,\r\n        MatSliderModule,\r\n        MatSlideToggleModule,\r\n        MatSnackBarModule,\r\n        MatStepperModule,\r\n        MatTableModule,\r\n        MatTabsModule,\r\n        MatToolbarModule,\r\n        MatTooltipModule,\r\n        TextFieldModule,\r\n    ],\r\n    exports: [\r\n        CommonModule,\r\n        MatAutocompleteModule,\r\n        MatButtonModule,\r\n        MatButtonToggleModule,\r\n        MatCardModule,\r\n        MatCheckboxModule,\r\n        MatChipsModule,\r\n        MatDatepickerModule,\r\n        MatDialogModule,\r\n        MatDividerModule,\r\n        MatExpansionModule,\r\n        MatFormFieldModule,\r\n        MatInputModule,\r\n        MatIconModule,\r\n        MatListModule,\r\n        MatMenuModule,\r\n        MatNativeDateModule,\r\n        MatProgressBarModule,\r\n        MatProgressSpinnerModule,\r\n        MatRadioModule,\r\n        MatRippleModule,\r\n        MatSelectModule,\r\n        MatSliderModule,\r\n        MatSlideToggleModule,\r\n        MatSnackBarModule,\r\n        MatStepperModule,\r\n        MatTableModule,\r\n        MatTabsModule,\r\n        MatToolbarModule,\r\n        MatTooltipModule,\r\n        TextFieldModule,\r\n    ],\r\n    providers: [],\r\n})\r\nexport class MaterialModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
     ],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "Button",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/Button/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    label: 'Primary',\r\n    variant: 'primary',\r\n  },\r\n}"
+            },
+            {
+                "name": "ButtonWithIcon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/Button/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  name: 'IconButton',\r\n  args: {\r\n    ...Button.args,\r\n    showLeftIcon: true,\r\n  },\r\n}"
+            },
+            {
+                "name": "DateFormats",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/shared/material.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n    parse: {\r\n        dateInput: ['YYYY/MM/DD']\r\n    },\r\n    display: {\r\n        dateInput: 'YYYY/MM/DD',\r\n        monthYearLabel: 'MMM YYYY',\r\n        dateA11yLabel: 'LL',\r\n        monthYearA11yLabel: 'MMMM YYYY',\r\n    },\r\n}"
+            },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
@@ -386,7 +483,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ButtonComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [MatButtonModule],\r\n    })\r\n  ],\r\n  tags: ['autodocs'],\r\n  render: (args: ButtonComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    color: {\r\n      description: 'Theme color palette for the button.',\r\n      options: [null, 'primary', 'accent', 'warn'],\r\n      control: { type: 'select' }\r\n    },\r\n    mode: {\r\n      options: ['primary', 'secondary'],\r\n      control: { type: 'select' }\r\n    }\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ButtonComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [MaterialModule],\r\n    })\r\n  ],\r\n  tags: ['autodocs'],\r\n  render: (args: ButtonComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    color: {\r\n      description: 'Theme color palette for the button.',\r\n      options: [null, 'primary', 'accent', 'warn'],\r\n      control: 'select'\r\n    },\r\n    variant: {\r\n      options: ['primary', 'secondary', 'icon'],\r\n      control: 'radio'\r\n    },\r\n    showLeftIcon: {\r\n      control: 'boolean'\r\n    },\r\n    showRightIcon: {\r\n      control: 'boolean'\r\n    },\r\n  },\r\n}"
+            },
+            {
+                "name": "OnlyIcon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/Button/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    label: 'Icon',\r\n    variant: 'icon',\r\n  },\r\n}"
             },
             {
                 "name": "preview",
@@ -396,27 +503,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\r\n  parameters: {\r\n    actions: { argTypesRegex: '^on[A-Z].*' },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/,\r\n      },\r\n    },\r\n  },\r\n\r\n  decorators: [\r\n    // Adds theme switching support.\r\n    withThemeByClassName({\r\n      themes: {\r\n        light: 'light',\r\n        dark: 'dark',\r\n      },\r\n      defaultTheme: 'light',\r\n    }),\r\n  ],\r\n}"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/Button/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    label: 'Primary',\r\n    mode: 'primary',\r\n  },\r\n}"
-            },
-            {
-                "name": "Secondary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/Button/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    label: 'Secondary',\r\n    mode: 'secondary',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  parameters: {\r\n    actions: { argTypesRegex: '^on[A-Z].*' },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/,\r\n      },\r\n    },\r\n    docs: {\r\n      theme: trushield,\r\n    },\r\n  },\r\n\r\n  decorators: [\r\n    // Adds theme switching support.\r\n    withThemeByClassName({\r\n      themes: {\r\n        light: 'light',\r\n        dark: 'dark',\r\n      },\r\n      defaultTheme: 'light',\r\n    }),\r\n  ],\r\n}"
             }
         ],
         "functions": [],
@@ -437,6 +524,26 @@
         "groupedVariables": {
             "src/stories/components/Button/Button.stories.ts": [
                 {
+                    "name": "Button",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/Button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    label: 'Primary',\r\n    variant: 'primary',\r\n  },\r\n}"
+                },
+                {
+                    "name": "ButtonWithIcon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/Button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  name: 'IconButton',\r\n  args: {\r\n    ...Button.args,\r\n    showLeftIcon: true,\r\n  },\r\n}"
+                },
+                {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -444,27 +551,29 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ButtonComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [MatButtonModule],\r\n    })\r\n  ],\r\n  tags: ['autodocs'],\r\n  render: (args: ButtonComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    color: {\r\n      description: 'Theme color palette for the button.',\r\n      options: [null, 'primary', 'accent', 'warn'],\r\n      control: { type: 'select' }\r\n    },\r\n    mode: {\r\n      options: ['primary', 'secondary'],\r\n      control: { type: 'select' }\r\n    }\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ButtonComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [MaterialModule],\r\n    })\r\n  ],\r\n  tags: ['autodocs'],\r\n  render: (args: ButtonComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    color: {\r\n      description: 'Theme color palette for the button.',\r\n      options: [null, 'primary', 'accent', 'warn'],\r\n      control: 'select'\r\n    },\r\n    variant: {\r\n      options: ['primary', 'secondary', 'icon'],\r\n      control: 'radio'\r\n    },\r\n    showLeftIcon: {\r\n      control: 'boolean'\r\n    },\r\n    showRightIcon: {\r\n      control: 'boolean'\r\n    },\r\n  },\r\n}"
                 },
                 {
-                    "name": "Primary",
+                    "name": "OnlyIcon",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/stories/components/Button/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Primary',\r\n    mode: 'primary',\r\n  },\r\n}"
-                },
+                    "defaultValue": "{\r\n  args: {\r\n    label: 'Icon',\r\n    variant: 'icon',\r\n  },\r\n}"
+                }
+            ],
+            "src/shared/material.module.ts": [
                 {
-                    "name": "Secondary",
+                    "name": "DateFormats",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/Button/Button.stories.ts",
+                    "file": "src/shared/material.module.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Secondary',\r\n    mode: 'secondary',\r\n  },\r\n}"
+                    "type": "object",
+                    "defaultValue": "{\r\n    parse: {\r\n        dateInput: ['YYYY/MM/DD']\r\n    },\r\n    display: {\r\n        dateInput: 'YYYY/MM/DD',\r\n        monthYearLabel: 'MMM YYYY',\r\n        dateA11yLabel: 'LL',\r\n        monthYearA11yLabel: 'MMMM YYYY',\r\n    },\r\n}"
                 }
             ],
             ".storybook/preview.ts": [
@@ -476,7 +585,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\r\n  parameters: {\r\n    actions: { argTypesRegex: '^on[A-Z].*' },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/,\r\n      },\r\n    },\r\n  },\r\n\r\n  decorators: [\r\n    // Adds theme switching support.\r\n    withThemeByClassName({\r\n      themes: {\r\n        light: 'light',\r\n        dark: 'dark',\r\n      },\r\n      defaultTheme: 'light',\r\n    }),\r\n  ],\r\n}"
+                    "defaultValue": "{\r\n  parameters: {\r\n    actions: { argTypesRegex: '^on[A-Z].*' },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/,\r\n      },\r\n    },\r\n    docs: {\r\n      theme: trushield,\r\n    },\r\n  },\r\n\r\n  decorators: [\r\n    // Adds theme switching support.\r\n    withThemeByClassName({\r\n      themes: {\r\n        light: 'light',\r\n        dark: 'dark',\r\n      },\r\n      defaultTheme: 'light',\r\n    }),\r\n  ],\r\n}"
                 }
             ]
         },
@@ -528,7 +637,17 @@
                 "linktype": "component",
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/shared/material.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DateFormats",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -536,6 +655,26 @@
                 "type": "interface",
                 "linktype": "interface",
                 "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Button",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ButtonWithIcon",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -555,17 +694,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/Button/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
+                "name": "OnlyIcon",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
