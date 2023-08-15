@@ -33,8 +33,8 @@ $mat-pink: (
     )
 );
 $mat-teal: (
-    50: #e0f2f1,
-    100: #b2dfdb,
+    50: #dee8ed,
+    100: #9cdbd9,
     200: #80cbc4,
     300: #4db6ac,
     400: #26a69a,
@@ -72,7 +72,7 @@ $trushield-theme-warn: mat.define-palette(mat.$red-palette);
 
 $trushield-typography: mat.define-typography-config(
     $font-family: "freight-sans-pro, sans-serif",
-    $headline-1: mat-typography-level(32px, 48px, 500, "freight-micro-pro, serif"),
+    $headline-1: mat-typography-level(36px, 48px, 500, "freight-micro-pro, serif"),
     $headline-5: mat-typography-level(17px, 25px, 500, "freight-micro-pro, serif"),
     $body-1: mat-typography-level(16px, 24px, 500, "freight-sans-pro, serif"),
     $subtitle-1: mat-typography-level(17px, 26px, 600, "freight-micro-pro, serif")

@@ -2,6 +2,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./trushield-theme.scss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.main-container {
+    p,
+    li {
+        @apply text-gray-500;
+    }
+    .heading {
+        @apply border-b-4 border-solid mb-[30px] border-gray-500;
+        h1 {
+            @apply text-gray-500;
+        }
+    }
+    .sub-heading {
+        h2 {
+            @apply text-primary-600 border-[0] border-b border-solid border-gray-500 font-medium;
+        }
+    }
+}
+.mdc-button {
+    text-transform: uppercase;
+}
