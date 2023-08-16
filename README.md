@@ -1,5 +1,5 @@
 # Introduction
-Design System for Trushield Insurance
+Design System for TruShield Insurance
 [![Build & Release Status](https://dev.azure.com/nbfc/NBFC/_apis/build/status/DX-DesignSystem)](https://dev.azure.com/nbfc/NBFC/_build?definitionId=1552)
 ## Run Project Locally
 ### Prerequisites
