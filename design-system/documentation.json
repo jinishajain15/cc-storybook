@@ -72,18 +72,18 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<h1 class=\"text-xl font-bold\">\r\n  Hello world!\r\n</h1>\r\n<app-button></app-button>"
+            "templateData": "<h1 class=\"text-xl font-bold\">\r\n  Hello world!\r\n</h1>\r\n<cc-button [label]=\"'test'\" [icon]=\"'favorite'\" [color]=\"'accent'\" [variant]=\"'primary'\"\r\n  [showLeftIcon]=\"true\"></cc-button>"
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-0cb8e97b8423c83bed375c7ca695ff8288ac73c5a9d1cfe7bd5ddb0a12663d13a4509dfc6b305ccf49d33fe94eda06ac888b0aa7fca02f28b9413a0be8e34395",
+            "id": "component-ButtonComponent-70c9d2a8b21af14b4286e37b3a4151e90c58a6fe89dd12b9d2c6cb85a520a5aeba7184440353bd4fbedbcf35d6db48de02b3997a5ac5df8bbfefe434e8dbe128",
             "file": "src/app/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-button",
+            "selector": "cc-button",
             "styleUrls": [
                 "./button.component.scss"
             ],
@@ -172,7 +172,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { ThemePalette } from '@angular/material/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n  @Input() label = 'Button';\n  @Input() icon = 'info_icon';\n  @Input() color = 'primary';\n  @Input() variant = 'primary';\n  @Input() showLeftIcon: Boolean = false;\n  @Input() showRightIcon: Boolean = false;\n\n\n  /* @Output()\n  onClick = new EventEmitter<Event>(); */\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { ThemePalette } from '@angular/material/core';\n\n@Component({\n  selector: 'cc-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n  @Input() label = 'Button';\n  @Input() icon = 'info_icon';\n  @Input() color = 'primary';\n  @Input() variant = 'primary';\n  @Input() showLeftIcon: Boolean = false;\n  @Input() showRightIcon: Boolean = false;\n\n\n  /* @Output()\n  onClick = new EventEmitter<Event>(); */\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
