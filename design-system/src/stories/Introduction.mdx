@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 
 
 import cc from "./assets/cc.png";
+import intro from "./assets/intro.png";
 
 <Meta title="Introduction" decorators= {[
   moduleMetadata({
@@ -15,8 +16,18 @@ import cc from "./assets/cc.png";
     ]}
 
 />
-
-<div className="main-container">
+<style>
+  {`
+    .sbdocs-wrapper {
+        padding: 0;
+    }
+    .sbdocs-content {
+            max-width: 100%;
+    }
+  `}
+</style>
+<img src={intro} alt="Introduction" class="w-full"/>
+<div className="main-container px-8 py-12">
   <div className="heading">
     # The TruShield Insurance Design System
   </div>
