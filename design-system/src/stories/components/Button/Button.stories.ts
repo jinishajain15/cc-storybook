@@ -1,16 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { ButtonComponent } from '../../../app/button/button.component';
 import { moduleMetadata } from '@storybook/angular';
-import { MatButtonModule } from '@angular/material/button';
+import { MaterialModule } from '../../../shared/material.module';
 
-// More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
 const meta: Meta<ButtonComponent> = {
   title: 'Components/Button',
   component: ButtonComponent,
   decorators: [
     moduleMetadata({
       declarations: [],
-      imports: [MatButtonModule],
+      imports: [MaterialModule],
     })
   ],
   tags: ['autodocs'],
@@ -23,12 +22,18 @@ const meta: Meta<ButtonComponent> = {
     color: {
       description: 'Theme color palette for the button.',
       options: [null, 'primary', 'accent', 'warn'],
-      control: { type: 'select' }
+      control: 'select'
     },
-    mode: {
-      options: ['primary', 'secondary'],
-      control: { type: 'select' }
-    }
+    variant: {
+      options: ['primary', 'secondary', 'icon'],
+      control: 'radio'
+    },
+    showLeftIcon: {
+      control: 'boolean'
+    },
+    showRightIcon: {
+      control: 'boolean'
+    },
   },
 };
 
@@ -36,16 +41,25 @@ export default meta;
 type Story = StoryObj<ButtonComponent>;
 
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
-export const Primary: Story = {
+export const Button: Story = {
   args: {
     label: 'Primary',
-    mode: 'primary',
+    variant: 'primary',
   },
 };
 
-export const Secondary: Story = {
+export const ButtonWithIcon: Story = {
+  name: 'IconButton',
   args: {
-    label: 'Secondary',
-    mode: 'secondary',
+    ...Button.args,
+    showLeftIcon: true,
   },
 };
+
+export const OnlyIcon: Story = {
+  args: {
+    label: 'Icon',
+    variant: 'icon',
+  },
+};
+

@@ -1,6 +1,14 @@
-<button mat-raised-button [color]="color" *ngIf="mode=='primary'">
+<button mat-raised-button [color]="color" *ngIf="variant=='primary'">
+    <mat-icon *ngIf="showLeftIcon">{{icon}}</mat-icon>
     {{ label }}
+    <mat-icon *ngIf="showRightIcon" iconPositionEnd>{{icon}}</mat-icon>
 </button>
-<button mat-stroked-button [color]="color" *ngIf="mode=='secondary'">
+<button mat-stroked-button [color]="color" *ngIf="variant=='secondary'">
+    <mat-icon *ngIf="showLeftIcon">{{icon}}</mat-icon>
     {{ label }}
+    <mat-icon *ngIf="showRightIcon" iconPositionEnd>{{icon}}</mat-icon>
+</button>
+
+<button mat-icon-button [color]="color" *ngIf="variant=='icon'">
+    <mat-icon>{{icon}}</mat-icon>
 </button>
