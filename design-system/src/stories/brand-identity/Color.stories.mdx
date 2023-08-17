@@ -10,111 +10,244 @@ import { Meta } from "@storybook/addon-docs";
 
     Our colors convey our brand personality and values but also help users navigate through the interface. The right combination of colors can influence how they feel, think, and behave.
 
-    <style>
-        {`
-            .color__item{
-                margin: 5px;
-                padding: 10px;
-                border: 1px solid #D4D6D8;
-            }
-            .color__box {
-                width: 110px;
-                height: 60px;
-                display: block;
-            }
-            .color__name{
-            font-size: 13px;
-            color: #666;
-            font-weight: 600;
-            margin: 10px 0;
-            }
-            .color__code{
-                font-size: 13px;
-                color: #666;
-            }
-        `}
-    </style>
+    <div class="sub-heading">
+        ## Brand Colors
+    </div>
 
+    The primary colour palette consists of four corporate colours – green, teal, pink ,and blue.
+    Apply them to all communication materials to build a strong brand identity.To ensure consistency, use the
+    Pantone Matching System (PMS) formulas provided here.
 
-    ### Primary
+    <div class="grid grid-cols-1 gap-3 mb-[40px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <div class="bg-green-500 color-card dark">
+            <div class="pantone">
+                Pantone
+                <h6>2297 C <br />2297 U</h6>
+            </div>
+            <p>CMYK  <h6>30 / 0 / 100 / 0</h6></p>
+            <p>RGB <h6>192 / 215 / 49</h6></p>
+            <p>HEX <h6>#C0D731</h6></p>
+        </div>
 
-    <div class="color_wrapper flex flex-wrap">
-        <div class="color__item">
-            <div class="color__box bg-primary-100"></div>
-            <div class="color__code">Hex: <code>#b2dfdb</code></div>
+        <div class="bg-teal-500 color-card light">
+            <div class="pantone">
+                Pantone
+                <h6>7716 C<br />327 U</h6>
+            </div>
+            <p>CMYK  <h6>90 / 15 / 45 / 0</h6></p>
+            <p>RGB <h6>0 / 150 / 143</h6></p>
+            <p>HEX <h6>#00968F</h6></p>
         </div>
-        <div class="color__item">
-            <div class="color__box bg-primary-200"></div>
-            <div class="color__code">Hex: <code>#80cbc4</code></div>
+        <div class="bg-pink-500 color-card light">
+            <div class="pantone">
+                Pantone
+                <h6>226 C <br />226 U</h6>
+            </div>
+            <p>CMYK  <h6>9 / 88 / 14 / 0</h6></p>
+            <p>RGB <h6>220 / 69 / 135</h6></p>
+            <p>HEX <h6>#DC4588</h6></p>
         </div>
-        <div class="color__item">
-            <div class="color__box bg-primary-300"></div>
-            <div class="color__code">Hex: <code>#4db6ac</code></div>
+        <div class="bg-blue-500 color-card dark">
+            <div class="pantone">
+                Pantone
+                <h6>656 C <br />656 U</h6>
+            </div>
+            <p>CMYK  <h6>10 / 2 / 0 / 0</h6></p>
+            <p>RGB <h6>221 / 229 / 237</h6></p>
+            <p>HEX <h6>#DDE8ED</h6></p>
         </div>
-        <div class="color__item">
-            <div class="color__box bg-primary-400"></div>
-            <div class="color__code">Hex: <code>#26a69a</code></div>
-        </div>
-        <div class="color__item">
-            <div class="color__box bg-primary-500"></div>
-            <div class="color__code">Hex: <code>#00968f</code></div>
-        </div>
-        <div class="color__item">
-            <div class="color__box bg-primary-600"></div>
-            <div class="color__code">Hex: <code>#00847d</code></div>
-        </div>
-        <div class="color__item">
-            <div class="color__box bg-primary-700"></div>
-            <div class="color__code">Hex: <code>#00796b</code></div>
-        </div>
-        <div class="color__item">
-            <div class="color__box bg-primary-800"></div>
-            <div class="color__code">Hex: <code>#00695c</code></div>
-        </div>
-        <div class="color__item">
-            <div class="color__box bg-primary-900"></div>
-            <div class="color__code">Hex: <code>#004d40</code></div>
+        <div class="bg-gray-500 color-card light">
+            <div class="pantone">
+                Pantone
+                <h6>Black U/C 80%</h6>
+            </div>
+            <p>CMYK  <h6>0 / 0 / 0 / 80</h6></p>
+            <p>RGB <h6>88 / 88 / 90</h6></p>
+            <p>HEX <h6>#58585A</h6></p>
         </div>
     </div>
 
-    ### Secondary
+    <div class="sub-heading">
+        ## Primary Color Palette
+    </div>
 
-    <div class="color_wrapper flex flex-wrap">
-        <div class="color__item">
-            <div class="color__box bg-secondary-100"></div>
-            <div class="color__code">Hex: <code>#fce4ec</code></div>
+    <div class="color-palette flex flex-row flex-wrap grow">
+        <div class="color-item">
+            <div class="color-box bg-teal-e600"></div>
+            <p>rgb(0 132 125 / 10%)</p>
         </div>
-        <div class="color__item">
-            <div class="color__box bg-secondary-200"></div>
-            <div class="color__code">Hex: <code>#f8bbd0</code></div>
+        <div class="color-item">
+            <div class="color-box bg-teal-d600"></div>
+            <p>rgb(0 132 125 / 20%)</p>
         </div>
-        <div class="color__item">
-            <div class="color__box bg-secondary-300"></div>
-            <div class="color__code">Hex: <code>#f48fb1</code></div>
+        <div class="color-item">
+            <div class="color-box bg-teal-c600"></div>
+            <p>rgb(0 132 125 / 40%)</p>
         </div>
-        <div class="color__item">
-            <div class="color__box bg-secondary-400"></div>
-            <div class="color__code">Hex: <code>#dc4588</code></div>
+        <div class="color-item">
+            <div class="color-box bg-teal-b600"></div>
+            <p>rgb(0 132 125 / 60%)</p>
         </div>
-        <div class="color__item">
-            <div class="color__box bg-secondary-500"></div>
-            <div class="color__code">Hex: <code>#e91e63</code></div>
+        <div class="color-item">
+            <div class="color-box bg-teal-a600"></div>
+            <p>rgb(0 132 125 / 80%)</p>
         </div>
-        <div class="color__item">
-            <div class="color__box bg-secondary-600"></div>
-            <div class="color__code">Hex: <code>#d8317c</code></div>
-        </div>
-        <div class="color__item">
-            <div class="color__box bg-secondary-700"></div>
-            <div class="color__code">Hex: <code>#c2185b</code></div>
-        </div>
-        <div class="color__item">
-            <div class="color__box bg-secondary-800"></div>
-            <div class="color__code">Hex: <code>#ad1457</code></div>
-        </div>
-        <div class="color__item">
-            <div class="color__box bg-secondary-900"></div>
-            <div class="color__code">Hex: <code>#880e4f</code></div>
+        <div class="color-item">
+            <div class="color-box bg-teal-600"></div>
+            <p>HEX #00847d</p>
         </div>
     </div>
+
+    <div class="color-palette flex flex-row flex-wrap grow">
+        <div class="color-item">
+            <div class="color-box bg-teal-e100"></div>
+            <p>rgb(156 219 217 / 10%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-teal-d100"></div>
+            <p>rgb(156 219 217 / 20%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-teal-c100"></div>
+            <p>rgb(156 219 217 / 40%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-teal-b100"></div>
+            <p>rgb(156 219 217 / 60%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-teal-a100"></div>
+            <p>rgb(156 219 217 / 80%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-teal-100"></div>
+            <p>HEX #9CDBD9</p>
+        </div>
+    </div>
+
+    <div class="color-palette flex flex-row flex-wrap grow">
+        <div class="color-item">
+            <div class="color-box bg-blue-e500"></div>
+            <p>rgb(222 232 237 / 10%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-blue-d500"></div>
+            <p>rgb(222 232 237 / 20%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-blue-c500"></div>
+            <p>rgb(222 232 237 / 40%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-blue-b500"></div>
+            <p>rgb(222 232 237 / 60%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-blue-a500"></div>
+            <p>rgb(222 232 237 / 80%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-blue-500"></div>
+            <p>HEX #DEE8ED</p>
+        </div>
+    </div>
+
+    <div class="color-palette flex flex-row flex-wrap grow">
+        <div class="color-item">
+            <div class="color-box bg-green-e500"></div>
+            <p>rgb(192 215 49 / 80%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-green-d500"></div>
+            <p>rgb(192 215 49 / 20%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-green-c500"></div>
+            <p>rgb(192 215 49 / 40%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-green-b500"></div>
+            <p>rgb(192 215 49 / 60%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-green-a500"></div>
+            <p>rgb(192 215 49 / 80%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-green-500"></div>
+            <p>HEX #C0D731</p>
+        </div>
+    </div>
+
+    <div class="sub-heading">
+        ## Secondary Color Palette
+    </div>
+    <div class="color-palette flex flex-row flex-wrap grow">
+        <div class="color-item">
+            <div class="color-box bg-pink-e600"></div>
+            <p>rgb(216 49 124 / 10%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-pink-d600"></div>
+            <p>rgb(216 49 124 / 20%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-pink-c600"></div>
+            <p>rgb(216 49 124 / 40%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-pink-b600"></div>
+            <p>rgb(216 49 124 / 60%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-pink-a600"></div>
+            <p>rgb(216 49 124 / 80%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-pink-600"></div>
+            <p>HEX #D8317C</p>
+        </div>
+    </div>
+
+    <div class="sub-heading">
+        ## Gray Color Palette
+    </div>
+    <div class="color-palette flex flex-row flex-wrap grow">
+        <div class="color-item">
+            <div class="color-box bg-gray-e500"></div>
+            <p>rgb(88 88 90 / 10%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-gray-d500"></div>
+            <p>rgb(88 88 90 / 20%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-gray-c500"></div>
+            <p>rgb(88 88 90 / 40%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-gray-b500"></div>
+            <p>rgb(88 88 90 / 60%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-gray-a500"></div>
+            <p>rgb(88 88 90 / 80%)</p>
+        </div>
+        <div class="color-item">
+            <div class="color-box bg-gray-500"></div>
+            <p>HEX #58585A</p>
+        </div>
+    </div>
+
+     <div class="sub-heading">
+        ## Usability
+    </div>
+
+    Use the 60-30-10 rule. This rule simply means that colors should be used in 60%, 30%, and 10% of your design area. Use 60% for the dominant color, 30% for the secondary color,
+    and 10% towards an accent color. These proportions help create balance and prevent you from making a colorful and chaotic mess. Typically, the dominant and secondary colors
+    should be relatively neutral colors. Reserve the accent color for what you want to stand out the most on your page — for example, the primary call to action.
+
+    Use accessible-colors.com to make sure your colours are accessible.
+
+    Required contrast ratio: 4.5
 </div>

@@ -64,18 +64,18 @@ $mat-teal: (
         A700: $dark-primary-text
     )
 );
-
 @include mat.core();
 $trushield-theme-primary: mat.define-palette($mat-teal, 600);
 $trushield-theme-accent: mat.define-palette($mat-pink, 600);
 $trushield-theme-warn: mat.define-palette(mat.$red-palette);
+$font-family-body: "freight-sans-pro, sans-serif";
+$font-family-heading: "freight-micro-pro, serif";
 
 $trushield-typography: mat.define-typography-config(
-    $font-family: "freight-sans-pro, sans-serif",
-    $headline-1: mat-typography-level(36px, 48px, 500, "freight-micro-pro, serif"),
-    $headline-5: mat-typography-level(17px, 25px, 500, "freight-micro-pro, serif"),
-    $body-1: mat-typography-level(16px, 24px, 500, "freight-sans-pro, serif"),
-    $subtitle-1: mat-typography-level(17px, 26px, 600, "freight-micro-pro, serif")
+    $headline-1: mat-typography-level(36px, 48px, 500, $font-family-heading),
+    $headline-5: mat-typography-level(17px, 25px, 500, $font-family-heading),
+    $body-1: mat-typography-level(16px, 24px, 500, $font-family-body),
+    $subtitle-1: mat-typography-level(17px, 26px, 600, $font-family-heading)
 );
 
 $trushield-theme: mat.define-light-theme(

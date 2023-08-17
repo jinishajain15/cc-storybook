@@ -12,6 +12,7 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
 .main-container {
     p,
     li {
@@ -25,7 +26,7 @@ body {
     }
     .sub-heading {
         h2 {
-            @apply text-primary-600 border-[0] border-b border-solid border-gray-500 font-medium;
+            @apply text-teal-600 border-[0] border-b border-solid border-gray-500 font-medium;
         }
     }
     .card {
@@ -35,7 +36,39 @@ body {
         box-shadow: theme("boxShadow.lg");
     }
     .secondary-btn {
-        @apply text-white bg-primary-600 uppercase py-[7px] px-[15px] rounded;
+        @apply text-white bg-teal-600 uppercase py-[7px] px-[15px] rounded;
+    }
+    .color-card {
+        @apply font-bold lining-nums uppercase p-6;
+        h6 {
+            @apply text-xl;
+        }
+        .pantone h6 {
+            @apply mb-8 text-3xl leading-9;
+        }
+        &.dark {
+            p,
+            h6 {
+                @apply text-gray-500;
+            }
+        }
+        &.light {
+            p,
+            h6 {
+                @apply text-white;
+            }
+        }
+    }
+    .color-palette {
+        .color-item {
+            @apply m-1.5 p-2 uppercase lining-nums font-bold text-center;
+            p {
+                @apply text-xs;
+            }
+            .color-box {
+                @apply p-12 w-32;
+            }
+        }
     }
 }
 .mdc-button {
