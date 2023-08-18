@@ -4,6 +4,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        freightSans: ['freight-sans-pro', 'sans-serif'],
+        freightMicro: ['freight-micro-pro', 'serif'],
+      },
       colors: {
         blue: {
           500: "#dee8ed",

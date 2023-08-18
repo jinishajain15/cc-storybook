@@ -4,16 +4,30 @@
 @tailwind utilities;
 @import "./trushield-theme.scss";
 
+@layer base {
+    h1,
+    h2 {
+        @apply font-freightMicro;
+    }
+    body {
+        @apply m-0 font-freightSans;
+    }
+}
+
 html,
 body {
     height: 100%;
 }
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
 
 .main-container {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-freightMicro;
+    }
     p,
     li {
         @apply text-gray-500;
@@ -40,21 +54,21 @@ body {
     }
     .color-card {
         @apply font-bold lining-nums uppercase p-6;
-        h6 {
-            @apply text-xl;
+        .color-code {
+            @apply text-xl block;
         }
-        .pantone h6 {
+        .pantone .color-code {
             @apply mb-8 text-3xl leading-9;
         }
         &.dark {
             p,
-            h6 {
+            .color-code {
                 @apply text-gray-500;
             }
         }
         &.light {
             p,
-            h6 {
+            .color-code {
                 @apply text-white;
             }
         }
