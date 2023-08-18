@@ -72,7 +72,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<h1 class=\"text-xl font-bold\">\r\n  Hello world!\r\n</h1>\r\n<cc-button [label]=\"'test'\" [icon]=\"'favorite'\" [color]=\"'accent'\" [variant]=\"'primary'\"\r\n  [showLeftIcon]=\"true\"></cc-button>"
+            "templateData": "<section class=\"mat-typography\">\r\n  <h1 class=\"mat-h1\">This header will be styled</h1>\r\n</section>\r\n<cc-button></cc-button>"
         },
         {
             "name": "ButtonComponent",
