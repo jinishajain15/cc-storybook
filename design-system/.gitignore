@@ -12,6 +12,9 @@ npm-debug.log
 yarn-error.log
 package-lock.json
 
+# Storybook
+build-storybook.log
+
 # IDEs and editors
 .idea/
 .project
