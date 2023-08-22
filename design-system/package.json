@@ -7,8 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "storybook": "ng run design-system:storybook",
-    "tailwind": "npx tailwindcss -i ./src/styles.scss -o ./src/assets/css/tailwind.css --watch",
+    "storybook": "concurrently 'npm:watch:*'",
+    "watch:storybook": "ng run design-system:storybook",
+    "watch:tailwind": "npx tailwindcss -i ./src/styles.scss -o ./src/assets/css/tailwind.css --watch",
     "build-storybook": "ng run design-system:build-storybook",
     "chromatic": "npx chromatic --project-token=chpt_5269dea35c13172"
   },
@@ -27,6 +28,7 @@
     "@fontsource/material-icons": "^5.0.5",
     "@fontsource/roboto": "^5.0.5",
     "@storybook/addon-storysource": "^7.2.1",
+    "concurrently": "^8.2.1",
     "css-loader": "^6.8.1",
     "rxjs": "~7.8.0",
     "style-loader": "^3.3.3",
@@ -65,5 +67,8 @@
     "typescript": "~4.9.4"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "design-system@0.0.0"
+  "_id": "design-system@0.0.0",
+  "engines": {
+    "yarn": "YARN NO LONGER USED - use npm instead."
+  }
 }

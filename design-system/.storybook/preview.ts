@@ -10,6 +10,8 @@ import '!style-loader!css-loader!@fontsource/roboto/500.css';
 import '!style-loader!css-loader!@fontsource/roboto/700.css';
 import '!style-loader!css-loader!@fontsource/material-icons';
 
+import '!style-loader!css-loader!../src/assets/css/tailwind.css';
+
 
 setCompodocJson(docJson);
 
