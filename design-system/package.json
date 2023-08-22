@@ -68,7 +68,5 @@
   },
   "readme": "ERROR: No README data found!",
   "_id": "design-system@0.0.0",
-  "engines": {
-    "yarn": "YARN NO LONGER USED - use npm instead."
-  }
+  "engines": {}
 }
