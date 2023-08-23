@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from '../shared/material.module';
-import { ButtonComponent } from './button/button.component';
+import { ButtonComponent } from '../components/button/button.component';
 
 @NgModule({
   declarations: [
