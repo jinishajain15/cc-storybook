@@ -32,6 +32,9 @@ body {
     li {
         @apply text-gray-500;
     }
+    a {
+        @apply text-teal-600;
+    }
     .heading {
         @apply border-b-4 border-solid mb-[30px] border-gray-500;
         h1 {

@@ -544,10 +544,6 @@ body {
   --tw-backdrop-sepia:  ;
 }
 
-.m-12 {
-  margin: 3rem;
-}
-
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
@@ -602,10 +598,6 @@ body {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.border {
-  border-width: 1px;
 }
 
 .bg-blue-500 {
@@ -796,6 +788,10 @@ body {
     li {
     --tw-text-opacity: 1;
     color: rgb(88 88 90 / var(--tw-text-opacity));
+  }
+  a {
+    --tw-text-opacity: 1;
+    color: rgb(0 132 125 / var(--tw-text-opacity));
   }
   .heading {
     margin-bottom: 30px;
