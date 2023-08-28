@@ -77,7 +77,7 @@
         {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-70c9d2a8b21af14b4286e37b3a4151e90c58a6fe89dd12b9d2c6cb85a520a5aeba7184440353bd4fbedbcf35d6db48de02b3997a5ac5df8bbfefe434e8dbe128",
-            "file": "src/app/button/button.component.ts",
+            "file": "src/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -357,13 +357,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-3bfc4d1fd5f077e4ccc8afa4b3fc4962f08e945e841a8f5c27172d3d6efbccef1ba55528a4cb34657f195d08a0bafb823f2cc8ee4861f7c8dd75786226c47aea",
+            "id": "module-AppModule-ae1e92f35798e510ba5b4e644d845a68835ec7c6fe94db80b77a3fe406eab6db17fa4e22dcc1d949dec2f4de64aebd426aa41126619e29f080af3ab6272584f2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\nimport { MaterialModule } from '../shared/material.module';\nimport { ButtonComponent } from './button/button.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    ButtonComponent,\n  ],\n  imports: [\n    BrowserModule,\n    BrowserAnimationsModule,\n    MaterialModule,\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\nimport { MaterialModule } from '../shared/material.module';\nimport { ButtonComponent } from '../components/button/button.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    ButtonComponent,\n  ],\n  imports: [\n    BrowserModule,\n    BrowserAnimationsModule,\n    MaterialModule,\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -449,7 +449,7 @@
                 "name": "Button",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/Button/Button.stories.ts",
+                "file": "src/components/button/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -459,7 +459,7 @@
                 "name": "ButtonWithIcon",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/Button/Button.stories.ts",
+                "file": "src/components/button/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -479,7 +479,7 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/Button/Button.stories.ts",
+                "file": "src/components/button/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
@@ -489,7 +489,7 @@
                 "name": "OnlyIcon",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/Button/Button.stories.ts",
+                "file": "src/components/button/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -513,7 +513,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ButtonComponent>",
-                "file": "src/stories/components/Button/Button.stories.ts",
+                "file": "src/components/button/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -522,12 +522,12 @@
         ],
         "enumerations": [],
         "groupedVariables": {
-            "src/stories/components/Button/Button.stories.ts": [
+            "src/components/button/Button.stories.ts": [
                 {
                     "name": "Button",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/Button/Button.stories.ts",
+                    "file": "src/components/button/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -537,7 +537,7 @@
                     "name": "ButtonWithIcon",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/Button/Button.stories.ts",
+                    "file": "src/components/button/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -547,7 +547,7 @@
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/Button/Button.stories.ts",
+                    "file": "src/components/button/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
@@ -557,7 +557,7 @@
                     "name": "OnlyIcon",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/Button/Button.stories.ts",
+                    "file": "src/components/button/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -592,13 +592,13 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "src/stories/components/Button/Button.stories.ts": [
+            "src/components/button/Button.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ButtonComponent>",
-                    "file": "src/stories/components/Button/Button.stories.ts",
+                    "file": "src/components/button/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -632,7 +632,47 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/button/button.component.ts",
+                "filePath": "src/components/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Button",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ButtonWithIcon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "OnlyIcon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/button/button.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
@@ -655,46 +695,6 @@
                 "type": "interface",
                 "linktype": "interface",
                 "name": "User",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/Button/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Button",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/Button/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "ButtonWithIcon",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/Button/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/Button/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "OnlyIcon",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
