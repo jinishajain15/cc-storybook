@@ -544,12 +544,31 @@ body {
   --tw-backdrop-sepia:  ;
 }
 
-.mb-\[20px\] {
-  margin-bottom: 20px;
+.absolute {
+  position: absolute;
 }
 
-.mb-\[40px\] {
-  margin-bottom: 40px;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-2\.5 {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .flex {
@@ -566,6 +585,14 @@ body {
 
 .grow {
   flex-grow: 1;
+}
+
+.basis-1\/2 {
+  flex-basis: 50%;
+}
+
+.basis-1\/4 {
+  flex-basis: 25%;
 }
 
 .grid-cols-1 {
@@ -590,6 +617,14 @@ body {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-3 {
@@ -770,6 +805,12 @@ body {
   padding-bottom: 3rem;
 }
 
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 html,
 body {
   height: 100%;
@@ -792,6 +833,14 @@ body {
   a {
     --tw-text-opacity: 1;
     color: rgb(0 132 125 / var(--tw-text-opacity));
+  }
+  a {
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+  ol {
+    list-style: auto;
   }
   .heading {
     margin-bottom: 30px;

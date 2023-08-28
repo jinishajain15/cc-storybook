@@ -34,6 +34,12 @@ body {
     }
     a {
         @apply text-teal-600;
+        &:hover {
+            @apply underline;
+        }
+    }
+    ol {
+        list-style: auto;
     }
     .heading {
         @apply border-b-4 border-solid mb-[30px] border-gray-500;
