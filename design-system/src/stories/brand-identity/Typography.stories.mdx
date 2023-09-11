@@ -1,8 +1,10 @@
 import { Meta } from "@storybook/addon-docs";
-import freightsans from "../assets/freight-sans-pro.png";
-import cc from "../assets/cc.png";
-import freightmicro from "../assets/freight-micro-pro.png";
+
 import centurygothic from "../assets/century-gothic.png";
+import fontSizingCopy from "../assets/font-sizing-copy.png";
+import fontSizingHeading from "../assets/font-sizing-heading.png";
+import freightsans from "../assets/freight-sans-pro.png";
+import freightmicro from "../assets/freight-micro-pro.png";
 import styling from "../assets/typography-styling.png";
 
 
@@ -22,6 +24,16 @@ import styling from "../assets/typography-styling.png";
     for great flexibility when constructing informational hierarchies.
     The consistent application of TruShield Corporate Typography, in conjunction with the TruShield logo and Colours, creates a
     unique typographic style which is the visual property of TruShield Insurance. It makes all communications instantly recognizable, differentiating TruShield from our competition.
+
+    <div class="sub-heading">
+        ## Installing the Fonts
+    </div>
+
+    Use Adobe Fonts to install Freight Sans Pro and Freight Micro Pro. If you do not have access to Adobe Fonts, you can use the following link to embed the font on website:
+
+    ```css
+    <link rel="stylesheet" href="https://use.typekit.net/rjg3urm.css" />
+    ```
 
     <div class="sub-heading">
         ## Primary Typeface
@@ -48,13 +60,141 @@ import styling from "../assets/typography-styling.png";
     <img src={styling} alt="Typography Styling" />
 
     <div class="sub-heading">
-        ## Installing the Fonts
+        ## Working with Typography
+    </div>
+    **1. Make it scannable** <br/>
+    Keep related text aligned and closer together to create visual groupings. For most languages, the the majority of text should be left-aligned.
+
+    **2. Adjust text based on device size**<br/>
+    Because small screens are often at an arm’s distance, we can decrease the size of larger headings and increase the size of important body text.
+
+    **3. Create visual hierarchy**<br/>
+    Pair font weight, size, and color together to create hierarchy. Use a lighter color or font-size to de-emphasize secondary content.
+
+    <div class="sub-heading">
+        ## Font Sizing
     </div>
 
-    Use Adobe Fonts to install Freight Sans Pro and Freight Micro Pro. If you do not have access to Adobe Fonts, you can use the following link to embed the font on website:
+    ### Headings
+    ---
 
-    ```css
-    <link rel="stylesheet" href="https://use.typekit.net/rjg3urm.css" />
-    ```
+    <img src={fontSizingHeading} alt="Font Sizing - Heading" />
+    <div class="flex flex-col">
+        <table class="min-w-full text-left text-sm font-sizing-table">
+            <thead class="border-b">
+                <tr>
+                <th scope="col">Desktop</th>
+                <th scope="col">Tablet</th>
+                <th scope="col">Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        **Basic properties** <br/>
+                        Font Size: 35px <br/>
+                        Font weight: 100 / light <br/>
+                        Character spacing -0.01em <br/>
+                        Color: #xxxxx
+                    </td>
+                    <td>
+                        **Basic properties** <br/>
+                        Font Size: 35px <br/>
+                        Font weight: 100 / light <br/>
+                        Character spacing -0.01em <br/>
+                        Color: #xxxxx
+                    </td>
+                    <td>
+                        **Basic properties** <br/>
+                        Font Size: 35px <br/>
+                        Font weight: 100 / light <br/>
+                        Character spacing -0.01em <br/>
+                        Color: #xxxxx
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        **UI properties** <br/>
+                        Line height: 40px<br/>
+                        Margin: 52px <br/>
+                    </td>
+                    <td>
+                        **UI properties** <br/>
+                        Line height: 40px<br/>
+                        Margin: 52px <br/>
+                    </td>
+                    <td>
+                        **UI properties** <br/>
+                        Line height: 40px<br/>
+                        Margin: 52px <br/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    ### Copy
+    ---
+    <img src={fontSizingCopy} alt="Font Sizing - Copy" />
+    <div class="flex flex-col">
+        <table class="min-w-full text-left text-sm font-sizing-table">
+            <thead class="border-b">
+                <tr>
+                <th scope="col">Desktop</th>
+                <th scope="col">Tablet</th>
+                <th scope="col">Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        **Basic properties** <br/>
+                        Font Size: 35px <br/>
+                        Font weight: 100 / light <br/>
+                        Character spacing -0.01em <br/>
+                        Color: #xxxxx
+                    </td>
+                    <td>
+                        **Basic properties** <br/>
+                        Font Size: 35px <br/>
+                        Font weight: 100 / light <br/>
+                        Character spacing -0.01em <br/>
+                        Color: #xxxxx
+                    </td>
+                    <td>
+                        **Basic properties** <br/>
+                        Font Size: 35px <br/>
+                        Font weight: 100 / light <br/>
+                        Character spacing -0.01em <br/>
+                        Color: #xxxxx
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        **UI properties** <br/>
+                        Line height: 40px<br/>
+                        Margin: 52px <br/>
+                    </td>
+                    <td>
+                        **UI properties** <br/>
+                        Line height: 40px<br/>
+                        Margin: 52px <br/>
+                    </td>
+                    <td>
+                        **UI properties** <br/>
+                        Line height: 40px<br/>
+                        Margin: 52px <br/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="sub-heading">
+        ## Accessibility
+    </div>
+    TruShield uses different contrasting colors, weights, and sizes to stand out in different situations.
+    All typography styles displayed above meet WCAG 2.0 AAA contrast standards with respect to their prescribed use cases.
+    Use [accessible-colors.com](https://accessible-colors.com/) to make sure your colours are accessible. Required contrast ratio: 4.5.
 
 </div>

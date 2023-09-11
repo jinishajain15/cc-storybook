@@ -61,6 +61,7 @@ body {
     .secondary-btn {
         @apply text-white bg-teal-600 uppercase py-[7px] px-[15px] rounded;
     }
+    /***** Color Palette *****/
     .color-card {
         @apply font-bold lining-nums uppercase p-6;
         .color-code {
@@ -93,7 +94,16 @@ body {
             }
         }
     }
+    /***** Typography *****/
+    .font-sizing-table {
+        tr,
+        th,
+        td {
+            @apply border-none bg-transparent;
+        }
+    }
 }
+
 .mdc-button {
     text-transform: uppercase;
 }
