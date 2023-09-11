@@ -1,5 +1,5 @@
 import { create } from '@storybook/theming/create';
-import logo from "../src/stories/assets/trushield-logo.png";
+import logo from "../src/assets/images/primary-logo.png";
 
 export default create({
     base: 'light',
